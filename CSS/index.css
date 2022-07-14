@@ -205,6 +205,10 @@ html {
   fill: aqua;
 }
 
+footer{
+  margin-top: 200px;
+}
+
 footer p {
   text-align: center;
   color: #fff;
