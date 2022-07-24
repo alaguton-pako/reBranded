@@ -31,7 +31,7 @@ nav .nav-link-wrapper li {
   margin: 0 10px;
 }
 
-header nav .nav-link-wrapper li a {
+nav .nav-link-wrapper li a {
   text-decoration: none;
   font-size: 20px;
   color: #fff;
@@ -41,7 +41,7 @@ header nav .nav-link-wrapper li a {
 }
 
 nav .nav-link-wrapper li a:hover {
-  color: #551a8b;
+  color: blue;
 }
 
 .nav-link-wrapper {
@@ -62,12 +62,20 @@ nav .logo {
   margin-top: 10px;
 }
 
-.menu_button {
+.menu_button i {
+  margin-top: 25px;
+  cursor: pointer;
+  font-size: 25px;
+  color: #fff;
   display: none;
 }
 
 #click {
   display: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .section {
@@ -100,7 +108,7 @@ nav .logo {
 }
 
 .project-card:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
   transition: 0.3s;
 }
 
@@ -160,46 +168,38 @@ footer svg:hover {
 }
 
 @media (max-width: 800px) {
-  nav {
-    /* margin-top: -50px; */
-    background-color: black;
+  nav .menu_button i {
     display: block;
-    justify-content: space-around;
-    position: fixed;
-    width: 100%;
-    height: 30vh;
-  }
-
-  .menu_button {
-    display: flex;
-    justify-content: flex-end;
-    color: #fff;
-    padding: 5px 40px 10px 0px;
   }
 
   nav .logo {
+    margin-top: 15px;
     color: #fff;
-    font-size: 20px;
-    margin-top: 10px;
+    font-size: 30px;
   }
 
   nav .nav-link-wrapper {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #222222;
+    height: 100vh;
+    width: 100%;
     display: block;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    transition: all 0, 3s ease;
+  }
+
+  #click:checked ~ .nav-link-wrapper {
+    left: 0%;
+  }
+
+  nav .nav-link-wrapper li {
+    margin: 40px 0;
   }
 
   nav .nav-link-wrapper li a {
-    text-decoration: none;
-    font-size: 14px;
-    color: #fff;
-    font-weight: 400;
-    padding: 10px;
-    border-radius: 5px;
-  }
-
-  .nav-link-wrapper {
-    justify-content: center;
-    align-items: center;
+    font-size: 20px;
+    display: block;
   }
 }
