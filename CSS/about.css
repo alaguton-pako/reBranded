@@ -125,6 +125,7 @@ html {
 .sKills_section h2{
   text-align: center;
   color: aqua;
+  margin-bottom: 25px;
 }
 
 .stack-group{
@@ -132,6 +133,7 @@ html {
   gap: 10px;
   justify-content: center;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .stack-progress-wrapper label{
